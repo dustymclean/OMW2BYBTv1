@@ -27,11 +27,6 @@ jobs:
           npm install
           npm install -D tailwindcss-animate gh-pages
 
-      - name: Build Production Interface 🏗️
-        run: npm run build
-        env:
-          VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-
       - name: Ship to GitHub Pages 🚢
         uses: JamesIves/github-pages-deploy-action@v4
         with:
